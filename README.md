@@ -1,24 +1,19 @@
-# README
+# RepDiary
+ペット用日々の記録管理ツール。
+爬虫類に特化しています。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## コーディング規約
+Rubocop使用
 
-* Ruby version
+## Guardを用いたRuboCopの自動化
+Guardを用いて、RuboCopによる解析を自動化。
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+コマンドラインでGuardを導入。
+```
+$ gem install guard-rubocop
+```
+以下のコマンドで実行。
+```
+$ guard
+```
