@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  memo: MyString
+  fece: 1
+  clean: 1
+  handling: 1
+  shed: 1
+  bath: 1
+  tall: 1.5
+  weight: 1.5
+  day: 2018-09-18 23:56:43
+  reptile_id: MyString
+
+two:
+  memo: MyString
+  fece: 1
+  clean: 1
+  handling: 1
+  shed: 1
+  bath: 1
+  tall: 1.5
+  weight: 1.5
+  day: 2018-09-18 23:56:43
+  reptile_id: MyString

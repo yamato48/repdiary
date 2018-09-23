@@ -1,0 +1,39 @@
+h1 Listing records
+
+table
+  thead
+    tr
+      th Memo
+      th Fece
+      th Clean
+      th Handling
+      th Sheds
+      th Bath
+      th Tall
+      th Weight
+      th day
+      th Reptile
+      th
+      th
+      th
+
+  tbody
+    - @records.each do |record|
+      tr
+        td = record.memo
+        td = record.fece
+        td = record.clean
+        td = record.handling
+        td = record.shed
+        td = record.bath
+        td = record.tall
+        td = record.weight
+        td = record.day
+        td = record.reptile_id
+        td = link_to 'Show', record
+        td = link_to 'Edit', edit_record_path(record)
+        td = link_to 'Destroy', record, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Record', new_record_path

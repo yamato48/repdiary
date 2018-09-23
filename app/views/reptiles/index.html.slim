@@ -1,0 +1,27 @@
+h1 Listing reptiles
+
+table
+  thead
+    tr
+      th Name
+      th Birthday
+      th Comeday
+      th Image
+      th
+      th
+      th
+
+  tbody
+    - @reptiles.each do |reptile|
+      tr
+        td = reptile.name
+        td = reptile.birthday
+        td = reptile.comeday
+        td = reptile.image
+        td = link_to 'Show', reptile
+        td = link_to 'Edit', edit_reptile_path(reptile)
+        td = link_to 'Destroy', reptile, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Reptile', new_reptile_path

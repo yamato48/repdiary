@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @reptile.name
+p
+  strong Birthday:
+  = @reptile.birthday
+p
+  strong Comeday:
+  = @reptile.comeday
+p
+  strong Image:
+  = @reptile.image
+
+=> link_to 'Edit', edit_reptile_path(@reptile)
+'|
+=< link_to 'Back', reptiles_path

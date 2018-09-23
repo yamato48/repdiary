@@ -1,0 +1,39 @@
+= form_for @record do |f|
+  - if @record.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@record.errors.count, "error")} prohibited this record from being saved:"
+      ul
+        - @record.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :memo
+    = f.text_field :memo
+  .field
+    = f.label :fece
+    = f.number_field :fece
+  .field
+    = f.label :clean
+    = f.number_field :clean
+  .field
+    = f.label :handling
+    = f.number_field :handling
+  .field
+    = f.label :shed
+    = f.number_field :shed
+  .field
+    = f.label :bath
+    = f.number_field :bath
+  .field
+    = f.label :tall
+    = f.text_field :tall
+  .field
+    = f.label :weight
+    = f.text_field :weight
+  .field
+    = f.label :day
+    = f.datetime_select :day
+  .field
+    = f.label :reptile_id
+    = f.text_field :reptile_id
+  .actions = f.submit

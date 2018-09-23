@@ -1,0 +1,21 @@
+= form_for @reptile do |f|
+  - if @reptile.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@reptile.errors.count, "error")} prohibited this reptile from being saved:"
+      ul
+        - @reptile.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :birthday
+    = f.datetime_select :birthday
+  .field
+    = f.label :comeday
+    = f.datetime_select :comeday
+  .field
+    = f.label :image
+    = f.text_field :image
+  .actions = f.submit

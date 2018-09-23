@@ -1,0 +1,36 @@
+p#notice = notice
+
+p
+  strong Memo:
+  = @record.memo
+p
+  strong Fece:
+  = @record.fece
+p
+  strong Clean:
+  = @record.clean
+p
+  strong Handling:
+  = @record.handling
+p
+  strong Shed:
+  = @record.shed
+p
+  strong Bath:
+  = @record.bath
+p
+  strong Tall:
+  = @record.tall
+p
+  strong Weight:
+  = @record.weight
+p
+  strong Reptile:
+  = @record.reptile_id
+p
+  strong day:
+  = @record.day
+
+=> link_to 'Edit', edit_record_path(@record)
+'|
+=< link_to 'Back', records_path

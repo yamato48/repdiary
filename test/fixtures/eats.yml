@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  worm: 1
+  cricket: 1
+  redroach: 1
+  dubia: 1
+  mouse: 1
+  artifical: 1
+  vegetable: 1
+  fruit: 1
+  bird: 1
+  egg: 1
+  other: 1
+  record_id: MyString
+
+two:
+  worm: 1
+  cricket: 1
+  redroach: 1
+  dubia: 1
+  mouse: 1
+  artifical: 1
+  vegetable: 1
+  fruit: 1
+  bird: 1
+  egg: 1
+  other: 1
+  record_id: MyString
