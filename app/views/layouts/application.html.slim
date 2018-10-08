@@ -8,4 +8,28 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    = yield
+  .container
+    nav.navbar.navbar-default.navbar-fixed-top.navbar-dark.bg-dark
+      .navbar-header
+        button.navbar-toggle.collapsed data-target="#togglebar" data-toggle="collapse" type="button"
+          span.sr-only Toggle
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        = link_to 'はちゅ記録', reptiles_path, class: 'navbar-brand'
+      #togglebar.collapse.navbar-collapse
+        ul.nav.navbar-nav.mr-auto
+          li
+            = link_to 'はちゅ一覧', reptiles_path, class: nav_item_active('reptiles')
+          li
+            = link_to '記録', records_path, class: nav_item_active('records')
+          li
+            = nav_user_signed
+    .row
+      = yield
+    .row
+      'acaca'
+      .hidden-xs
+        'iaaa'
+      .visible-xs
+        'bbbb'
