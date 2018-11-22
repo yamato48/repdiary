@@ -23,13 +23,19 @@ html
             = link_to 'はちゅ一覧', reptiles_path, class: nav_item_active('reptiles')
           li
             = link_to '記録', records_path, class: nav_item_active('records')
-          li
-            = nav_user_signed
+          - if user_signed_in?
+            li
+              = link_to 'ユーザー', '#', class: nav_item_active('Users')
+            li
+              = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: nav_item_active('sign_out')
+          - else
+            li
+              = link_to '新規登録', new_user_registration_path, class: nav_item_active('sign_up')
+            li
+              = link_to 'ログイン', new_user_session_path, class: nav_item_active('sign_in')
     .row
       = yield
-    .row
-      'acaca'
-      .hidden-xs
-        'iaaa'
-      .visible-xs
-        'bbbb'
+
+  footer.footer
+    .container
+      p.text-muted RepDiary

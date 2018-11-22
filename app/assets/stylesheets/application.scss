@@ -11,6 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  */
+@import "module/style";
 @import "bootstrap-sprockets";
 @import "bootswatch/flatly/variables";
 @import "bootstrap";
