@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'reptiles#index'
   devise_for :users
   resources :records
   resources :reptiles

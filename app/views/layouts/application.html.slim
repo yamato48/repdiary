@@ -1,0 +1,43 @@
+doctype html
+html
+  head
+    title
+      | Repdiary
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+  .container
+    nav.navbar.navbar-default.navbar-fixed-top.navbar-dark.bg-dark
+      .navbar-header
+        button.navbar-toggle.collapsed data-target="#togglebar" data-toggle="collapse" type="button"
+          span.sr-only Toggle
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        = link_to 'はちゅ記録', root_path, class: 'navbar-brand'
+      #togglebar.collapse.navbar-collapse
+        - if user_signed_in?
+          ul.nav.navbar-nav
+            li
+              = link_to 'はちゅ一覧', reptiles_path, class: nav_item_active('reptiles')
+            li
+              = link_to '記録', records_path, class: nav_item_active('records')
+          ul.nav.navbar-nav.navbar-right
+            li
+              = link_to 'ユーザー', '#', class: nav_item_active('Users')
+            li
+              = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: nav_item_active('sign_out')
+        - else
+          ul.nav.navbar-nav.navbar-right
+            li
+              = link_to '新規登録', new_user_registration_path, class: nav_item_active('sign_up')
+            li
+              = link_to 'ログイン', new_user_session_path, class: nav_item_active('sign_in')
+    .row
+      = yield
+
+  footer.footer
+    .container
+      p.text-muted RepDiary
