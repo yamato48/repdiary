@@ -16,19 +16,21 @@ html
           span.icon-bar
           span.icon-bar
           span.icon-bar
-        = link_to 'はちゅ記録', reptiles_path, class: 'navbar-brand'
+        = link_to 'はちゅ記録', root_path, class: 'navbar-brand'
       #togglebar.collapse.navbar-collapse
-        ul.nav.navbar-nav.mr-auto
-          li
-            = link_to 'はちゅ一覧', reptiles_path, class: nav_item_active('reptiles')
-          li
-            = link_to '記録', records_path, class: nav_item_active('records')
-          - if user_signed_in?
+        - if user_signed_in?
+          ul.nav.navbar-nav
+            li
+              = link_to 'はちゅ一覧', reptiles_path, class: nav_item_active('reptiles')
+            li
+              = link_to '記録', records_path, class: nav_item_active('records')
+          ul.nav.navbar-nav.navbar-right
             li
               = link_to 'ユーザー', '#', class: nav_item_active('Users')
             li
               = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: nav_item_active('sign_out')
-          - else
+        - else
+          ul.nav.navbar-nav.navbar-right
             li
               = link_to '新規登録', new_user_registration_path, class: nav_item_active('sign_up')
             li
