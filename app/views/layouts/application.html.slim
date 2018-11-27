@@ -18,6 +18,9 @@ html
           span.icon-bar
         = link_to 'はちゅ記録', root_path, class: 'navbar-brand'
       #togglebar.collapse.navbar-collapse
+        ul.nav.navbar-nav
+          li
+            = link_to 'コンセプト', '#', class: nav_item_active('concepts')
         - if user_signed_in?
           ul.nav.navbar-nav
             li
