@@ -10,6 +10,7 @@ AllCops:
   TargetRubyVersion: 2.4
   Exclude:
     - 'bin/*'
+    - "db/schema.rb"
 
 Rails:
   Enabled: true
